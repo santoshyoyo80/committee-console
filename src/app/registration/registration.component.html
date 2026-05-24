@@ -1,0 +1,36 @@
+<form action="" [formGroup] = "registrationForm" (ngSubmit) = onSubmit()>
+ <div class="container">
+      <div class="row">
+        <label for="First Name">
+          <strong>First Name :</strong> 
+        </label>
+        <input type="text" placeholder="Enter first name" formControlName="firstName" required class="form-control">
+      </div>
+      <div class="row">
+        <label for="Last Name">
+          <strong>Last Name : </strong>
+        </label>
+        <input type="text"  placeholder="Enter last name" formControlName="lastName" required class="form-control">
+      </div>
+      <div class="row">
+        <label for="Email">
+          <strong>Email : </strong>
+        </label>
+        <input type="email" placeholder="Enter first name" formControlName ="email" required class="form-control">
+      </div>
+      <div class="row">
+        <b>Password :</b>
+        <input type="password" placeholder="Enter password" formControlName="password" required class="form-control">
+      </div>      
+      <div class="row">
+        <label for="file">
+          <strong>File : </strong>
+        </label>
+        <input type="file" formControlName="file" required class="form-control" (change)="onFileChange($event)">
+      </div>
+      &nbsp;
+      <div style="text-align: center;">
+        <button type="submit" class="btn btn-primary">Register</button>
+      </div>
+    </div>
+</form>
