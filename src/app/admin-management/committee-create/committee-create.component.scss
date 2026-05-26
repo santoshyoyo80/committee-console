@@ -1,4 +1,4 @@
-.user-form {
+.committee-form {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -12,15 +12,6 @@
 
 .full-width {
   width: 100%;
-}
-
-.form-row {
-  display: flex;
-  gap: 1rem;
-}
-
-.half-width {
-  width: 50%;
 }
 
 ::ng-deep .mat-mdc-dialog-container {

@@ -10,11 +10,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { UserCreateComponent } from './admin-management/user-create/user-create.component';
+import { CommitteeCreateComponent } from './admin-management/committee-create/committee-create.component';
+import { AnalyticsComponent } from './admin-management/analytics/analytics.component';
+import { CommitteePlatformSettingsComponent } from './committee-platform-settings/committee-platform-settings.component';
+import { CommitteeAdminComponent } from './committee-admin/committee-admin.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -24,8 +32,27 @@ import { MatCardModule } from '@angular/material/card';
     ParentComponent,
     ChildComponent,
     UserCreateComponent,
+    CommitteeCreateComponent,
+    AnalyticsComponent,
+    CommitteePlatformSettingsComponent,
+    CommitteeAdminComponent,
   ],
-  imports: [BrowserModule, CommonModule, AppRoutingModule, ReactiveFormsModule, FormsModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatButtonModule, MatCardModule],
+  imports: [
+    BrowserModule,
+    CommonModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatCardModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatIconModule,
+    MatDialogModule,
+  ],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
 })

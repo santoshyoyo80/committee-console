@@ -1,0 +1,84 @@
+<div class="analytics-container">
+  <div class="analytics-header">
+    <h1>Analytics Dashboard</h1>
+    <p>Overview of committee platform statistics</p>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card primary">
+      <div class="stat-icon">
+        <mat-icon>groups</mat-icon>
+      </div>
+      <div class="stat-content">
+        <h3>Total Members</h3>
+        <p class="stat-number">{{ totalMembers }}</p>
+      </div>
+    </div>
+
+    <div class="stat-card accent">
+      <div class="stat-icon">
+        <mat-icon>corporate_fare</mat-icon>
+      </div>
+      <div class="stat-content">
+        <h3>Total Committees</h3>
+        <p class="stat-number">{{ totalCommittees }}</p>
+      </div>
+    </div>
+
+    <div class="stat-card success">
+      <div class="stat-icon">
+        <mat-icon>check_circle</mat-icon>
+      </div>
+      <div class="stat-content">
+        <h3>Active Committees</h3>
+        <p class="stat-number">{{ activeCommittees }}</p>
+      </div>
+    </div>
+
+    <div class="stat-card warn">
+      <div class="stat-icon">
+        <mat-icon>event</mat-icon>
+      </div>
+      <div class="stat-content">
+        <h3>Upcoming Meetings</h3>
+        <p class="stat-number">{{ upcomingMeetings }}</p>
+      </div>
+    </div>
+
+    <div class="stat-card info">
+      <div class="stat-icon">
+        <mat-icon>pending</mat-icon>
+      </div>
+      <div class="stat-content">
+        <h3>Pending Requests</h3>
+        <p class="stat-number">{{ pendingRequests }}</p>
+      </div>
+    </div>
+
+    <div class="stat-card secondary">
+      <div class="stat-icon">
+        <mat-icon>task_alt</mat-icon>
+      </div>
+      <div class="stat-content">
+        <h3>Completed Meetings</h3>
+        <p class="stat-number">{{ completedMeetings }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="charts-section">
+    <div class="chart-card">
+      <h2>Committee Activity</h2>
+      <div class="chart-placeholder">
+        <p>Chart visualization will be added here</p>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <h2>Member Growth</h2>
+      <div class="chart-placeholder">
+        <p>Chart visualization will be added here</p>
+      </div>
+    </div>
+  </div>
+</div>

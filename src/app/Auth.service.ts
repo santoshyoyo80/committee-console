@@ -7,23 +7,18 @@ import { Observable } from 'rxjs';
 })
 export class AuthService {
 
-  private apiURL: string = "http://localhost:8081/api"
+  private readonly API_URL: string = "http://localhost:8081/api"
 
   constructor(private httpClient: HttpClient) { }
 
-
-  register(formData: FormData) : Observable<any>{
-    
-    const URI = `${this.apiURL}/register`;
-    console.log("AutService:: register() called..")
-    console.log("Sending request to URL = "+ URI);
-    console.log("Paylaod=", formData);
-  
-    return this.httpClient.post(`${this.apiURL}/register`, formData);
+  login(data: any) : Observable<any> {
+    const URI = `${this.API_URL}/login`;
+    return this.httpClient.post(URI, data);
   }
 
-  login(data: any) : Observable<any> {
-    return this.httpClient.post('${this.apiURL}/login', data)
+  register(formData: FormData) : Observable<any>{
+    const URI = `${this.API_URL}/register`;
+    return this.httpClient.post(URI, formData);
   }
 
   logOut() {
@@ -37,6 +32,4 @@ export class AuthService {
   getToke() : string | null {
     return localStorage.getItem("item");
   }
-
-
 }

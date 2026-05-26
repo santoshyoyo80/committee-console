@@ -1,0 +1,43 @@
+<div class="committee-create-container">
+  <h2>Create Committee</h2>
+  <form [formGroup]="committeeForm" class="committee-form">
+    <div class="form-field">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Committee Name</mat-label>
+        <input matInput formControlName="committee_name" placeholder="Enter committee name">
+        <mat-error *ngIf="committeeForm.get('committee_name')?.hasError('required')">
+          Committee name is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="form-field">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Committee Tenure (years)</mat-label>
+        <input matInput type="number" formControlName="commit_tenure" placeholder="Enter tenure in years">
+        <mat-error *ngIf="committeeForm.get('commit_tenure')?.hasError('required')">
+          Committee tenure is required
+        </mat-error>
+        <mat-error *ngIf="committeeForm.get('commit_tenure')?.hasError('pattern')">
+          Please enter a valid number
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="form-field">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Created By</mat-label>
+        <input matInput formControlName="created_by" placeholder="Enter creator name">
+        <mat-error *ngIf="committeeForm.get('created_by')?.hasError('required')">
+          Created by is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="form-actions">
+      <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="committeeForm.invalid">
+        Create Committee
+      </button>
+    </div>
+  </form>
+</div>
