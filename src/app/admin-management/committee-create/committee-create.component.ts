@@ -18,7 +18,8 @@ export class CommitteeCreateComponent implements OnInit {
   ngOnInit() {
     this.committeeForm = this.fb.group({
       committee_name: ['', Validators.required],
-      commit_tenure: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
+      start_date: ['', Validators.required],
+      end_date: ['', Validators.required],
       created_by: ['', Validators.required]
     });
   }

@@ -7,8 +7,6 @@ import { App } from './app';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ParentComponent } from './parent/parent.component';
-import { ChildComponent } from './child/child.component';
 import { UserCreateComponent } from './admin-management/user-create/user-create.component';
 import { CommitteeCreateComponent } from './admin-management/committee-create/committee-create.component';
 import { AnalyticsComponent } from './admin-management/analytics/analytics.component';
@@ -29,8 +27,6 @@ import { MatDialogModule } from '@angular/material/dialog';
     App,
     LoginComponent,
     RegistrationComponent,
-    ParentComponent,
-    ChildComponent,
     UserCreateComponent,
     CommitteeCreateComponent,
     AnalyticsComponent,

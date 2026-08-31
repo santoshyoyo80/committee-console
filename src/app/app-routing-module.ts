@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { App } from './app';
-import { ParentComponent } from './parent/parent.component';
 import { CommitteePlatformSettingsComponent } from './committee-platform-settings/committee-platform-settings.component';
 import { CommitteeAdminComponent } from './committee-admin/committee-admin.component';
 import { UserCreateComponent } from './admin-management/user-create/user-create.component';
@@ -12,10 +11,6 @@ import { AnalyticsComponent } from './admin-management/analytics/analytics.compo
 import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
-  {
-      path: "parent",
-      component: ParentComponent
-  },
   {
       path: "login",
       component: LoginComponent

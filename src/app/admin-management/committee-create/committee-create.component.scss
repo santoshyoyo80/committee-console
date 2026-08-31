@@ -1,3 +1,12 @@
+.committee-create-container {
+  h2 {
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+}
+
 .committee-form {
   display: flex;
   flex-direction: column;
@@ -8,6 +17,15 @@
 
 .form-field {
   width: 100%;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.half-width {
+  flex: 1;
 }
 
 .full-width {
