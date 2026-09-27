@@ -11,6 +11,7 @@ import { UserCreateComponent } from './admin-management/create-committee-admin/u
 import { CreateCommitteeComponent } from './admin-management/create-committee/create-committee.component';
 import { AnalyticsComponent } from './admin-management/analytics/analytics.component';
 import { CommitteePlatformSettingsComponent } from './committee-platform-settings/committee-platform-settings.component';
+import { MemberDirectoryComponent } from './committee-platform-settings/member-directory/member-directory.component';
 import { CommitteeAdminComponent } from './committee-admin/committee-admin.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -32,6 +33,7 @@ import { MatRadioModule } from '@angular/material/radio';
     CreateCommitteeComponent,
     AnalyticsComponent,
     CommitteePlatformSettingsComponent,
+    MemberDirectoryComponent,
     CommitteeAdminComponent,
   ],
   imports: [
