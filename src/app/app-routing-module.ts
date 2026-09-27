@@ -5,8 +5,8 @@ import { RegistrationComponent } from './registration/registration.component';
 import { App } from './app';
 import { CommitteePlatformSettingsComponent } from './committee-platform-settings/committee-platform-settings.component';
 import { CommitteeAdminComponent } from './committee-admin/committee-admin.component';
-import { UserCreateComponent } from './admin-management/user-create/user-create.component';
-import { CommitteeCreateComponent } from './admin-management/committee-create/committee-create.component';
+import { UserCreateComponent } from './admin-management/create-committee-admin/user-create.component';
+import { CreateCommitteeComponent } from './admin-management/create-committee/create-committee.component';
 import { AnalyticsComponent } from './admin-management/analytics/analytics.component';
 import { AuthGuard } from './auth.guard';
 
@@ -36,7 +36,7 @@ const routes: Routes = [
   },
   {
     path: "committee-create",
-    component: CommitteeCreateComponent,
+    component: CreateCommitteeComponent,
     canActivate: [AuthGuard]
   },
   {

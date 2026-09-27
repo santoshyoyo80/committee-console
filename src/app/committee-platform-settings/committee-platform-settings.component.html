@@ -77,8 +77,8 @@
           </svg>
         </div>
         <div class="menu-content">
-          <span class="menu-label">Total Members</span>
-          <span class="menu-count">0</span>
+          <span class="menu-label">Members</span>
+          <span class="menu-count">{{members.length}}</span>
         </div>
       </div>
 
@@ -162,7 +162,7 @@
       <div class="stats-grid">
         <div class="stat-card">
           <h3>Total Members</h3>
-          <p class="stat-number">0</p>
+          <p class="stat-number">{{members.length}}</p>
         </div>
         <div class="stat-card">
           <h3>Active Committees</h3>
@@ -189,7 +189,7 @@
     <!-- Create Committee Form -->
     <div *ngIf="selectedMenu === 'createCommittee'" class="content-section">
       <div class="form-card">
-        <app-committee-create (committeeCreated)="onCommitteeCreated($event)"></app-committee-create>
+        <committee-create (committeeCreated)="onCommitteeCreated($event)"></committee-create>
       </div>
     </div>
 
@@ -262,8 +262,55 @@
       </div>
     </div>
 
+    <div *ngIf="selectedMenu === 'members'" class="content-section">
+      <section class="members-panel">
+        <div class="members-panel-header">
+          <h2>Member directory</h2>
+          <span>{{members.length}} members</span>
+        </div>
+        <div class="members-table-wrap">
+          <table class="members-table">
+            <thead>
+              <tr>
+                <th>Member</th>
+                <th>Contact</th>
+                <th>Relative</th>
+                <th>Address</th>
+                <th>Folio No.</th>
+                <th>Committee</th>
+                <th>Heads</th>
+                <th>Joined</th>
+                <th>Role</th>
+                <th>Joined By</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let member of members">
+                <td>
+                  <strong>{{member.name}}</strong>
+                  <span class="member-id">ID {{member.memberId}}</span>
+                </td>
+                <td>
+                  <span>{{member.mobile}}</span>
+                  <span class="member-secondary">{{member.email}}</span>
+                </td>
+                <td>{{member.relativeName}}</td>
+                <td>{{member.address}}</td>
+                <td>{{member.folioNo || 'N/A'}}</td>
+                <td>{{member.committeeId}}</td>
+                <td>{{member.headsCount}}</td>
+                <td>{{member.joiningDate | date:'mediumDate'}}</td>
+                <td>{{member.isManager ? 'Manager' : 'Member'}}</td>
+                <td>{{member.joinedBy ?? 'N/A'}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
     <!-- Placeholder for other menu items -->
-    <div *ngIf="['members', 'committees', 'requests', 'meetings'].includes(selectedMenu)" class="content-section">
+    <div *ngIf="['committees', 'requests', 'meetings'].includes(selectedMenu)" class="content-section">
       <div class="placeholder-card">
         <p>{{selectedMenu | titlecase}} section coming soon...</p>
       </div>

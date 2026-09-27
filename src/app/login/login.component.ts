@@ -24,7 +24,7 @@ export class LoginComponent {
       const { email, password } = this.loginForm.value;
 
       // Hardcoded credentials for now
-      if (email === 'admin@committee.com' && password === 'admin123') {
+      if (email === 'admin@gmail.com' && password === 'admin') {
         localStorage.setItem('isLoggedIn', 'true');
         localStorage.setItem('userEmail', email);
         this.router.navigate(['/committee-platform-settings']);
